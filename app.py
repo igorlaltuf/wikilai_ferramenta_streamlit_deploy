@@ -7,7 +7,9 @@ if 'df_verbetes' not in st.session_state:
     print('Dados raspados com sucesso.')
 
 st.title('Ferramenta de Links da WikiLAI')
-st.write('Esta é a ferramenta da Fiquem Sabendo para adicionar os links dos verbetes da WikiLAI ao texto inserido na caixa de texto abaixo.')
+st.write('Esta é a ferramenta da Fiquem Sabendo para adicionar os links referentes aos verbetes da WikiLAI ao texto inserido na caixa de texto abaixo. \
+         Também é possível adicionar manualmente os links por meio do seguinte [arquivo](https://docs.google.com/spreadsheets/d/1eL56U-RMZPI7JPmOo08aEp9zQ1bNkE1erV0tf5KQzZc/edit#gid=135196774).')
+
 texto_usuario = st.text_area("Insira o texto da newsletter aqui:", height=600)
 
 
