@@ -11,7 +11,7 @@ treated_dir = os.path.join(data_dir, 'treated')
 output_dir = os.path.join(data_dir, 'output')
 
 # Caminhos dos arquivos
-sinonimos_file_path = os.path.join(treated_dir, 'links_sinonimos.csv')
+sinonimos_file_path = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSu6wT2iL175IvTqD0TF1kIKt-GHnPOXcBuJHAGfxW-vNgpfQjV6tNDO2fuKvcggkFyAVljIKQZKiPw/pub?gid=135196774&single=true&output=csv'
 links_file_path = os.path.join(treated_dir, 'links_wikilai.csv')
 output_file_path = os.path.join(output_dir, 'newsletter_com_links.txt')
 
@@ -26,7 +26,7 @@ def extrair_verbetes(verbetes_raspados, texto_newsletter):
         
     """
            
-    verbetes_sinonimos = pd.read_csv(sinonimos_file_path, sep=';')
+    verbetes_sinonimos = pd.read_csv(sinonimos_file_path, sep=',')
     todos_os_verbetes = pd.concat([verbetes_raspados, verbetes_sinonimos], ignore_index=True)
         
     for index, row in todos_os_verbetes.iterrows():
